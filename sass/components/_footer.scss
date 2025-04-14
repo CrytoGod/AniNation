@@ -3,15 +3,11 @@ $bg-footer: #495246;
 
 .site-footer {
   background-color: $bg-footer;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 2rem 0rem 2rem;
   color: #ffffff;
 
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
+
+  
 
   .footer-left {
     display: flex;
@@ -82,17 +78,32 @@ $bg-footer: #495246;
   }
 
   .footer-right {
-    flex-shrink: 0;
-
     img {
-      width: 300px;
-      max-width: 100%;
-      margin-top: -168px;
-      display: flex;
-      align-self: flex-end;
-      align-items: end;
-      object-fit: contain;
-      transform: translateY(30px); // adjust to position Gojo correctly
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+     margin-top: 50px;
+      margin-left: auto;
+      margin-right: -47px;
+      display: block;
+
+      @media screen and (min-width: 768px) {
+        width: 300px;
+        max-width: 100%;
+        margin-top: -150px;
+        
+        
+      }
+
+    @media screen and (min-width: 1200px) {
+     
+        width: 400px;
+        max-width: 100%;
+        margin-top: -300px;
+        
+      }
+      
     }
+    
   }
 }

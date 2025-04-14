@@ -11,7 +11,7 @@
         background-image: 
           linear-gradient(to right, #010101 15%, rgba(0, 0, 0, 0)),   // left black fade
           linear-gradient(to left, #010101 0.1%, rgba(0, 0, 0, 0)),   // right black fade
-          url('../../images/solo-level-big.png');
+          url('../images/solo-level-big.png'); // background image
       
         background-size: cover;
         background-position: center;
@@ -24,8 +24,8 @@
         
           background-image: 
             linear-gradient(to right, #010101 15%, rgba(0, 0, 0, 0)),
-            linear-gradient(to left, #010101 5%, rgba(0, 0, 0, 0)),
-            url('../../images/solo-level-big.png');
+            linear-gradient(to left, #010101 0.1%, rgba(0, 0, 0, 0)),
+            url('../images/solo-level-big.png');
         
       }
   

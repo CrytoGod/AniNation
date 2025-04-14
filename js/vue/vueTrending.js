@@ -5,8 +5,17 @@ const app = Vue.createApp({
             loadingMovies: true
         }
     },
+    // created() {
+    //     fetch('http://localhost/github/AniNation/aniNation-backend/public/movies')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             this.movies = data
+    //             this.loadingMovies = false;
+    //         })
+    //         .catch(error => console.error(error));
+    // },
     created() {
-        fetch('http://localhost/github/AniNation/aniNation-backend/public/movies')
+        fetch('http://localhost:8888/AniNation/aniNation-backend/public/index.php/movies')
             .then(response => response.json())
             .then(data => {
                 this.movies = data
