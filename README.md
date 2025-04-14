@@ -100,7 +100,7 @@ This project is licensed under the [MIT License](LICENSE).
 Feel free to reach out for feedback or collaboration:
 
 - 📧 [amaribuck71@gmail.com](mailto:amaribuck71@gmail.com)
-- 📧 [amaribuck71@gmail.com](mailto:amaribuck71@gmail.com)
+- 📧 [olatopmide@gmail.com](mailto:olatopmide@gmail.com)
 - 🌐 [amaribuck.com](http://amaribuck.com)
 - 🌐 [emmanuelopadele.com](https://emmanuelopadele.com/)
 
