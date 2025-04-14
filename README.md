@@ -43,7 +43,6 @@ ani-nation/
 - **Vue.js (Composition API)** — Frontend framework for a reactive UI
 - **Lumen** — Lightweight backend for APIs
 - **SCSS** — Modular and maintainable styles
-- **Axios** — For HTTP requests
 - **MySQL** — For user data and anime info
 - **Git** — Version control
 

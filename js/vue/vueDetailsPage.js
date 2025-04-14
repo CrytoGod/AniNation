@@ -19,7 +19,7 @@ const app = Vue.createApp({
     },
     methods: {
       fetchLocalMovie(id) {
-        fetch(`http://localhost/github/AniNation/aniNation-backend/public/movies`)
+        fetch(`http://localhost:8888/AniNation/aniNation-backend/public/index.php/movies`)
           .then((res) => res.json())
           .then((movies) => {
             const movie = movies.find((m) => m.mov_id === id || m.mov_id == id);
