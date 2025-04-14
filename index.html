@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    
+
+
+    <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+ 
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer type="module" src="js/modules/oop-comments.js"></script>
+
+    <script type="module" src="js/index.js"></script>
+
+    <title>Ani Nation</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="hidden">Welcome to the Ani Nation website!</h1>
+
+        <div class="grid-con">
+            <h2 class="hidden">Header</h2>
+
+            <div class="col-start-1 col-end-3" id="logo">
+                <a href="index.html"><img src="images/logo.svg" alt="Ani Nation Logo"></a>
+            </div>
+
+            <div class="col-start-3 col-end-4" id="search-bar">
+                <div class="search-bar">
+                  <input class="desktop" type="text" placeholder="Search for anime....">
+                  <button><img src="images/search-icon.svg" alt="Search"></button>
+                </div>
+              </div>
+    
+            <div class="col-start-4 col-end-5" id="burger">
+                <img src="images/menu.svg" alt="Burger menu icon">
+            </div>
+
+            <nav class="col-span-full " id="menu">
+                <h3 class="hidden">Header Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class=" grid-con spotlight-card">
+            <div class="spotlight-content col-span-full">
+              <p class="spotlight-rank">#1 Spotlight</p>
+              <h2 class="spotlight-title">Solo Leveling</h2>
+                <p class="spotlight-description">The story follows Sung Jin-Woo, the weakest hunter of all mankind. He is so weak that he is known as "the E-rank hunter".</p>
+              <div class="spotlight-buttons">
+                <button class="btn watch">
+                  <span class="icon">▶</span> Watch Now
+                </button>
+                <button class="btn detail">
+                  Detail <span class="arrow">➤</span>
+                </button>
+              </div>
+            </div>
+            <div class="spotlight-background"></div>
+          </section>
+
+          <section class="trending-section grid-con">
+            <h2>Trending</h2>
+        
+            <div class="trending-wrapper col-span-full">
+              <button class="arrow-btn left">◀</button>
+        
+              <div class="anime-list">
+                <div class="anime-card">
+                  <img src="images/one-peice 1.png" alt="One Piece" />
+                  <p>One Piece</p>
+                </div>
+                <div class="anime-card">
+                  <img src="images/dr-stone.png" alt="Dr Stone" />
+                  <p>Dr Stone</p>
+                </div>
+                <div class="anime-card">
+                  <img src="images/dbz-daima.png" alt="dbz Daima" />
+                  <p>Dragon Ball Daima</p>
+                </div>
+                <div class="anime-card">
+                  <img src="images/solo-leveling.png" alt="Solo Leveling" />
+                  <p>Solo Leveling</p>
+                </div>
+                <div class="anime-card">
+                    <img src="images/solo-leveling.png" alt="Solo Leveling" />
+                    <p>Solo Leveling</p>
+                </div>
+                <div class="anime-card">
+                    <img src="images/solo-leveling.png" alt="Solo Leveling" />
+                    <p>Solo Leveling</p>
+                </div>
+              </div>
+        
+              <button class="arrow-btn right">▶</button>
+            </div>
+          </section>
+
+          <section class="comment-area ">
+            <div class="wrapper grid-con">
+                <div class="character col-start-1 col-end-3">
+                    <img src="images/yami.png" alt="Character with sword and book" />
+                </div>
+          
+                <div class="content col-start-3 col-end-5">
+                    <button id="addCommentBtn">Add Comment</button>
+            
+                    <!-- Wrapped comments in slider container -->
+                    <div class="comment-slider-wrapper">
+                    <div class="comment-section" id="commentContainer"></div>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+          <section class="anime-section full-width-grid-con">
+            <div class="recently-updated col-span-9">
+              <h2 class="section-title">Recently Updated</h2>
+              <div class="anime-grid">
+                <div class="anime-card">
+                  <img src="images/touha.png" alt="Touhai">
+                  <p>Touhai</p>
+                </div>
+                <div class="anime-card">
+                  <img src="images/i-may-be-a-guild.png" alt="I May Be a Guild...">
+                  <p>I May Be a Guild..</p>
+                </div>
+                <!-- Add more cards -->
+              </div>
+            </div>
+          
+            <aside class="top-five col-span-3">
+              <h2 class="section-title">Top 5</h2>
+              <div class="ranked-list">
+                <div class="rank-card">
+                  <span class="rank">01</span>
+                  <img src="images/solo-leveling.png" alt="Solo Leveling">
+                  <div class="info">
+                    <p class="title">Solo Leveling</p>
+                    <div class="stats">
+                      <span class="stat green">💬 13</span>
+                      <span class="stat grey">⬇️ 11</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Repeat for ranks 2–5 -->
+              </div>
+            </aside>
+          </section>
+          
+          
+    </main>
+
+    <footer class="site-footer full-width-grid-con">
+        <div class="footer-content col-span-full">
+          <div class="footer-left">
+            <div class="logo">
+              <img src="images/logo.svg" alt="Ani Nation Logo">
+             
+            </div>
+      
+            <nav class="footer-nav">
+              <a href="#">Trending</a>
+              <a href="#">Recent</a>
+              <a href="#">Comments</a>
+            </nav>
+      
+            <hr />
+      
+            <div class="footer-credits">
+              <a href="https://github.com/AmariBuck" target="_blank">Amari Buck Git Hub</a>
+              <a href="https://github.com/emmanuel" target="_blank">Emmanuel Opadele Git Hub</a>
+            </div>
+          </div>
+      
+          <div class="footer-right">
+            <img src="images/gojo.png" alt="Gojo Satoru Image">
+          </div>
+        </div>
+      </footer>
+      
+    
+</body>
+</html>
+
+    
+
+
+

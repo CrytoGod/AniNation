@@ -1,0 +1,104 @@
+// Variables
+$bg-color: #3b453a;
+$accent-color: #b7d7a8;
+$green: #9de34f;
+$white: #fff;
+
+// Header Styles
+#header {
+  background-color: $bg-color;
+  padding: 10px 0;
+  color: $white;
+  max-width: auto;
+  width: 100%;
+ 
+}
+
+
+
+#logo {
+  
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#burger {
+ display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+  }
+}
+
+#menu {
+  display: none; // hidden by default for mobile
+  margin-top: 10px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 15px;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+// Search Bar (Add this to your HTML inside .grid-con if you want search)
+.search-bar {
+ 
+  align-items: center;
+  justify-content: center;
+
+  input {
+    background-color: #65705d;
+    color: $accent-color;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+
+    &::placeholder {
+      color: $accent-color;
+    }
+  }
+
+  button {
+    
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    margin-left: 100px;
+    cursor: pointer;
+  }
+}
+
+// Responsive behavior (you may have media queries already)
+@media (min-width: 768px) {
+  #menu {
+    display: block;
+  }
+
+  #burger {
+    display: none;
+  }
+}
