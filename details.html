@@ -25,6 +25,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer type="module" src="js/modules/oop-comments.js"></script>
+    <script defer type="module" src="js/vue/vueDetailsPage.js"></script>
 
     <script type="module" src="js/index.js"></script>
 
@@ -34,36 +35,45 @@
 <body>
 <div class="anime-page">
     <div class="content">
-      <div class="info-section">
-        <h1 class="title">Trillion Game</h1>
-  
-        <div class="meta">
-          <span class="badge">Premiered: Fall 2023</span>
-          <span class="badge">Duration: 24m</span>
-          <span class="badge ongoing">Ongoing</span>
+      <div id="detailsApp">
+        <div v-if="loading">
+          Loading...
         </div>
-  
-        <div class="poster-rating">
-          <img src="images/trillion-game.png" alt="Trillion Game Poster" class="poster" />
-          <div class="rating">
-            ⭐ <span>8.7</span>
+    
+        <div v-else-if="anime">
+          <div class="info-section">
+            <h1 class="title">{{ anime.title }}</h1>
+    
+            <div class="meta">
+              <span class="badge">Premiered: {{ anime.season || 'Unknown' }} {{ anime.year || '' }}</span>
+              <span class="badge">Duration: {{ anime.duration }}</span>
+              <span class="badge" :class="{ ongoing: anime.status.includes('Airing') }">{{ anime.status }}</span>
+            </div>
+    
+            <div class="poster-rating">
+              <img :src="anime.images.jpg.image_url" :alt="anime.title" class="poster" />
+              <div class="rating">
+                ⭐ <span>{{ anime.score }}</span>
+              </div>
+            </div>
+    
+            <div class="overview">
+              <h2>Overview:</h2>
+              <p>{{ anime.synopsis }}</p>
+            </div>
+    
+            <button class="watch-button">
+              Watch Now <span class="play-icon">▶</span>
+            </button>
           </div>
+    
+        </div>      
+        <div v-else>
+          <p>Anime not found.</p>
         </div>
-  
-        <div class="overview">
-          <h2>Overview:</h2>
-          <p>
-            After socially awkward technology specialist Manabu "Gaku" Taira is saved from thugs...
-          </p>
-        </div>
-  
-        <button class="watch-button">
-          Watch Now <span class="play-icon">▶</span>
-        </button>
       </div>
-  
       <div class="character-image">
-        <img src="images/naruto.png" alt="Character Image" />
+        <img :src="anime.images.jpg.image_url" :alt="anime.title" class="poster" />
       </div>
     </div>
   </div>
