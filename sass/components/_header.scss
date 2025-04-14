@@ -19,10 +19,15 @@ $white: #fff;
 #logo {
   
   align-items: center;
-
+  height: 50px;
   a {
     display: flex;
     align-items: center;
+    img{
+      width: 150px;
+     
+      margin-right: 10px;
+    }
   }
 }
 
@@ -94,11 +99,94 @@ $white: #fff;
 
 // Responsive behavior (you may have media queries already)
 @media (min-width: 768px) {
-  #menu {
-    display: block;
+
+  #logo {
+    margin-top: 10px;
   }
 
-  #burger {
-    display: none;
+  .search-bar {
+    width: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+  
+    input {
+      background-color: #65705d;
+      color: $accent-color;
+      border: none;
+      width: 350px;
+      padding: 12px 20px;
+      border-radius: 5px;
+      outline: none;
+  
+      &::placeholder {
+        color: $accent-color;
+      }
+    }
+  
+    button {
+      
+      border: none;
+      padding: 8px;
+      background-color: transparent;
+      margin-left: 150px;
+      cursor: pointer;
+      position: relative;
+      img {
+        width: 20px;
+        position: absolute;
+        top: -40px;
+        left: 200px;
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  #logo {
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    width: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+  
+    input {
+      background-color: #65705d;
+      color: $accent-color;
+      border: none;
+      width: 550px;
+      padding: 12px 20px;
+      border-radius: 5px;
+      outline: none;
+  
+      &::placeholder {
+        color: $accent-color;
+      }
+    }
+  
+    button {
+      
+      border: none;
+      padding: 8px;
+      background-color: transparent;
+      margin-left: 350px;
+      cursor: pointer;
+      position: relative;
+      img {
+        width: 20px;
+        position: absolute;
+        top: -40px;
+        left: 200px;
+      }
+
+    }
   }
 }
