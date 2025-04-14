@@ -6,26 +6,32 @@ $text-color: #ffffff;
   width: 100%;
   margin-top: 4rem;
   margin-bottom: 2rem;
+  background-color: #454F45;
 }
 
+
 .wrapper {
+  width: 100vw; // Take full viewport width
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 4rem;
   background-color: #454F45;
+  box-sizing: border-box; // Ensures padding doesn’t overflow
 }
 
 .character img {
   width: 400px;
   max-width: 100%;
+  margin-bottom: -35px;
   object-fit: contain;
 }
 
 .content {
-  text-align: center;
+  text-align: left;
   width: 100%;
+ 
 }
 
 // The button
