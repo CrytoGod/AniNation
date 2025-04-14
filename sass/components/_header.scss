@@ -3,74 +3,149 @@ $bg-color: #3b453a;
 $accent-color: #b7d7a8;
 $green: #9de34f;
 $white: #fff;
+$border-gray: #636363;
+$black: #000;
+$bright-red: #9de34f; // Assuming you want to define this
 
-// Header Styles
 #header {
   background-color: $bg-color;
   padding: 10px 0;
   color: $white;
-  max-width: auto;
   width: 100%;
- 
+  
 }
 
-
-
 #logo {
-  
   align-items: center;
   height: 50px;
+
   a {
     display: flex;
     align-items: center;
-    img{
+
+    img {
       width: 150px;
-     
       margin-right: 10px;
     }
   }
 }
 
 #burger {
- display: flex;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
+  text-align: right;
   cursor: pointer;
+  z-index: 3;
 
   img {
-    width: 30px;
-  }
-}
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 
-#menu {
-  display: none; // hidden by default for mobile
-  margin-top: 10px;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      display: inline-block;
-      margin-right: 15px;
-
-      a {
-        color: $white;
-        text-decoration: none;
-        font-weight: bold;
-
-        &:hover {
-          color: $green;
-        }
-      }
+    &.rotate {
+      transform: rotate(90deg); // Rotate the image, not the container
     }
   }
 }
 
-// Search Bar (Add this to your HTML inside .grid-con if you want search)
+
+#menu {
+  width: 100%;
+  text-align: center;
+  justify-self: center;
+  position: relative;
+  display: none;
+  background-color: $bg-color;
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: $bright-red; // Hover effect
+    }
+  }
+
+  img {
+    filter: brightness(100);
+  }
+
+  .btn-red {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  #menu-dropdown {
+    img {
+      transform: rotate(-90deg);
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+  }
+
+  
+      
+    
+  
+}
+
+#menu.open {
+  position: absolute;
+  background-color: $bg-color;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  z-index: 99999;
+
+  a {
+    font-size: 14pt;
+  }
+
+  ul {
+    margin-top: 60px;
+  }
+
+  li {
+    font-weight: 600;
+    padding: 25px 0;
+    border-bottom: $border-gray;
+  }
+
+  li:nth-of-type(6) {
+    margin-top: 10px;
+    border-bottom: none;
+  }
+
+  .btn-red {
+    padding: 15px 40px;
+  }
+
+  img {
+    display: none;
+  }
+
+  .menu-dropdown {
+    border: 0;
+    padding-bottom: 0;
+
+    .dropdown-list {
+      margin-top: 20px;
+      border-top: $border-gray;
+      display: block;
+    }
+  }
+}
+
+// Search Bar
 .search-bar {
- 
   align-items: center;
   justify-content: center;
 
@@ -88,7 +163,6 @@ $white: #fff;
   }
 
   button {
-    
     border: none;
     padding: 8px;
     background-color: transparent;
@@ -97,9 +171,8 @@ $white: #fff;
   }
 }
 
-// Responsive behavior (you may have media queries already)
-@media (min-width: 768px) {
-
+// Responsive tweaks
+@media (min-width: 768px), (min-width: 1200px) {
   #logo {
     margin-top: 10px;
   }
@@ -110,7 +183,7 @@ $white: #fff;
     margin-left: 20px;
     align-items: center;
     justify-content: center;
-  
+
     input {
       background-color: #65705d;
       color: $accent-color;
@@ -119,74 +192,40 @@ $white: #fff;
       padding: 12px 20px;
       border-radius: 5px;
       outline: none;
-  
+
       &::placeholder {
         color: $accent-color;
       }
     }
-  
+
     button {
-      
       border: none;
       padding: 8px;
       background-color: transparent;
       margin-left: 150px;
       cursor: pointer;
       position: relative;
+
       img {
         width: 20px;
         position: absolute;
         top: -40px;
         left: 200px;
       }
-
     }
   }
 }
 
-
 @media (min-width: 1200px) {
-
-  #logo {
-    margin-top: 10px;
+  .search-bar input {
+    width: 550px;
   }
 
-  .search-bar {
-    width: auto;
-    margin-top: 20px;
-    margin-left: 20px;
-    align-items: center;
-    justify-content: center;
-  
-    input {
-      background-color: #65705d;
-      color: $accent-color;
-      border: none;
-      width: 550px;
-      padding: 12px 20px;
-      border-radius: 5px;
-      outline: none;
-  
-      &::placeholder {
-        color: $accent-color;
-      }
-    }
-  
-    button {
-      
-      border: none;
-      padding: 8px;
-      background-color: transparent;
-      margin-left: 350px;
-      cursor: pointer;
-      position: relative;
-      img {
-        width: 20px;
-        position: absolute;
-        top: -40px;
-        left: 200px;
-      }
+  .search-bar button {
+    margin-left: 350px;
 
+    img {
+      left: 200px;
     }
   }
 }
