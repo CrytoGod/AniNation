@@ -1,0 +1,97 @@
+$card-bg: linear-gradient(to bottom right, #5e6b60, #3f473c);
+$accent: #a2ff62;
+$text-color: #ffffff;
+
+.comment-area {
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #454F45;
+}
+
+.character img {
+  width: 400px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.content {
+  text-align: center;
+  width: 100%;
+}
+
+// The button
+#addCommentBtn {
+  background: none;
+  border: 2px solid $accent;
+  color: $text-color;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: $accent;
+    color: #000;
+  }
+}
+
+// OUTER container that lets the cards scroll
+.comment-slider-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 1rem;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// INNER container holding the comment cards
+.comment-section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap; // important for horizontal scroll
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+// Comment card design
+.comment-card {
+  background: $card-bg;
+  color: $text-color;
+  width: 250px;
+  flex: 0 0 auto; // keeps size inside scroll
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .avatar {
+    background-color: $accent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+  }
+
+  .name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,86 @@
+.spotlight-card {
+    position: relative;
+    
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    overflow: hidden;
+   
+    background: 
+    linear-gradient(to right, #010101 20%, rgba(0, 0, 0, 0.3)),
+
+    
+    url('../../images/solo-level-big.png') no-repeat center/cover;
+    padding: 2rem;
+  
+    .spotlight-content {
+      z-index: 2;
+      max-width: 500px;
+  
+      .spotlight-rank {
+        font-size: 0.9rem;
+        color: #9de34f;
+        margin-bottom: 0.25rem;
+      }
+  
+      .spotlight-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+      }
+  
+      .spotlight-buttons {
+        display: flex;
+        gap: 1rem;
+  
+        .btn {
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          font-weight: 500;
+          border: none;
+          border-radius: 5px;
+          padding: 0.6rem 1.2rem;
+          cursor: pointer;
+          transition: background 0.3s ease;
+  
+          &.watch {
+            background-color: #9de34f;
+            color: #000;
+  
+            .icon {
+              width: 20px;
+              height: 20px;
+              margin-right: 8px;
+              border: 2px solid #000;
+              border-radius: 50%;
+              
+              padding-left: 6px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              padding-right: 4px;
+            }
+  
+            &:hover {
+              background-color: #81cb2d;
+            }
+          }
+  
+          &.detail {
+            background-color: #525252;
+            color: #fff;
+  
+            .arrow {
+              margin-left: 8px;
+            }
+  
+            &:hover {
+              background-color: #3d3d3d;
+            }
+          }
+        }
+      }
+    }
+  }
+  
