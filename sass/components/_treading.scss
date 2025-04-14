@@ -47,6 +47,19 @@
         overflow-x: auto;
         scroll-behavior: smooth;
         padding: 1rem 0;
+
+        a {
+          text-decoration: none;
+          p{
+            color: #00ff00;
+          }
+          p:hover{
+            color: #00ff00ab;
+          }
+        }
+        
+      
+        
   
         .anime-card {
           flex: 0 0 auto;
